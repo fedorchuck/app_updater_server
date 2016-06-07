@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.websystique.springmvc.model;
+package com.github.fedorchuck.appupdaterserver.model;
 
 import java.util.Objects;
 

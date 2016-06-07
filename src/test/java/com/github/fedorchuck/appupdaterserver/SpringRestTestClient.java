@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package com.websystique.springmvc;
+package com.github.fedorchuck.appupdaterserver;
 
+import com.github.fedorchuck.appupdaterserver.model.Response;
 import org.springframework.web.client.RestTemplate;
-
-import com.websystique.springmvc.model.Response;
 
 public class SpringRestTestClient {
 

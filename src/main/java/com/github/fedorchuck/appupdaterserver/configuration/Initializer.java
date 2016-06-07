@@ -14,11 +14,25 @@
  * limitations under the License.
  */
 
-package com.websystique.springmvc.service;
+package com.github.fedorchuck.appupdaterserver.configuration;
 
-import com.websystique.springmvc.model.Response;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public interface ClientService {
-	Response findByToken(String name);
-	Response getNext(String token);
+public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+ 
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[] { Config.class };
+    }
+  
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return null;
+    }
+  
+    @Override
+    protected String[] getServletMappings() {
+        return new String[] { "/" };
+    }
+
 }

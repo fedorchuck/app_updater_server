@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.websystique.springmvc.service;
+package com.github.fedorchuck.appupdaterserver.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.websystique.springmvc.model.Response;
+import com.github.fedorchuck.appupdaterserver.model.Response;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

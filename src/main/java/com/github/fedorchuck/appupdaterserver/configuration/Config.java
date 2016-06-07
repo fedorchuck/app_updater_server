@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.websystique.springmvc.configuration;
+package com.github.fedorchuck.appupdaterserver.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SuppressWarnings({"SpringFacetCodeInspection", "WeakerAccess"})
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.websystique.springmvc")
+@ComponentScan(basePackages = "com.github.fedorchuck.appupdaterserver")
 public class Config {
 	
 

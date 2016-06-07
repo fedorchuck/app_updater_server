@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.websystique.springmvc.controller;
+package com.github.fedorchuck.appupdaterserver.controller;
 
+import com.github.fedorchuck.appupdaterserver.model.Response;
+import com.github.fedorchuck.appupdaterserver.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.websystique.springmvc.model.Response;
-import com.websystique.springmvc.service.ClientService;
 
 @SuppressWarnings("unused")
 @RestController
@@ -40,10 +39,13 @@ public class UpdaterRestController {
 		Response response = clientService.findByToken(token);
 		if (response == null){
 			response = new Response("","","","bad token","doc url");
-			return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+
+			System.out.println(token+'\t'+response.toString());
+			return new ResponseEntity<>(response,HttpStatus.OK);
 		}
 		response = clientService.getNext(token);
 
+		System.out.println(token+'\t'+response.toString());
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 }
